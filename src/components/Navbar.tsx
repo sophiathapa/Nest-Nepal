@@ -17,7 +17,7 @@ const Navbar = () => {
     }
 
     const nextValentine = new Date(`${year}-02-14T00:00:00`);
-    const difference = nextValentine - now;
+    const difference = nextValentine.getTime() - now.getTime();
 
     // Calculate days, hours, minutes, seconds
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
