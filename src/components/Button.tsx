@@ -1,3 +1,10 @@
+import React from "react";
+
+interface ButtonProps {
+  color?: "green" | "pink";
+  placeholder?: string;
+}
+
 const styles = {
   green: {
     button: "bg-green border-green-foreground",
@@ -7,9 +14,9 @@ const styles = {
     button: "bg-pink border-pink-foreground",
     text: "text-pink-foreground",
   },
-};
+} as const;
 
-const Button = ({ color = "green", placeholder = "Contact Sales" }) => {
+const Button = ({ color = "green", placeholder = "Contact Sales" }: ButtonProps) => {
   return (
     <button
       className={`rounded-xl border p-0 ${styles[color].button}`}
@@ -18,7 +25,7 @@ const Button = ({ color = "green", placeholder = "Contact Sales" }) => {
         className={`flex items-center gap-2 h-[32px] px-3 ${styles[color].text}`}
       >
         <img
-          src={`${color}.svg`}
+          src={`/${color}.svg`}
           className="w-[26px] h-[26px]"
           alt={`${color} icon`}
         />

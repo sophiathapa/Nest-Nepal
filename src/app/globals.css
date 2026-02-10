@@ -2,10 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-
-
 @custom-variant dark (&:is(.dark *));
-
 
 @font-face {
   font-family: "Helvetica Now Display";
@@ -31,11 +28,11 @@
   font-display: swap;
 }
 
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans:
+    "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: var(--font-geist-mono);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
@@ -43,7 +40,6 @@
   --color-pink: var(--pink);
   --color-green-foreground: var(--green-foreground);
   --color-green: var(--green);
-  
 }
 
 :root {
@@ -62,9 +58,8 @@
 }
 
 @layer base {
-
   body {
-    @apply bg-background font-sans ;
+    @apply bg-background font-sans;
   }
 }
 
