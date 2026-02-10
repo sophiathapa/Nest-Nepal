@@ -12,7 +12,7 @@ const BrandsSection = () => {
 
         <div className="grid md:grid-cols-2  gap-10 p-5">
           <div className="flex items-center justify-center">
-            <img src="A logo Cloud.svg"></img>
+            <img src="A logo cloud.svg"></img>
           </div>
 
           <div className="text-start p-6 ">
