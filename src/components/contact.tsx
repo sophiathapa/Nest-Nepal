@@ -21,6 +21,7 @@ const Contact = () => {
                 {googleIcons.map((icon, i) => (
                   <img key={i} src={icon} className="w-[30px] h-[30px]" />
                 ))}
+
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Prefer to talk to sales directly?
