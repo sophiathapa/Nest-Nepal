@@ -40,21 +40,21 @@ const Navbar = () => {
 
   return (
     <nav className="p-5 w-full">
-      <div className="flex  items-center justify-between">
-        <div>
+      <div className="grid grid-cols-2 md:grid-cols-3 items-center gap-y-3">
+        <div className="justify-self-start">
           <img src="google 1.svg" alt="logo" />
         </div>
 
-        <div className="hidden sm:flex flex-col items-center">
-          <span className="text-[#F25277] italic font-semibold text-sm">
+        <div className="col-span-2 md:col-span-1 justify-self-center">
+          <span className="text-[#F25277] italic font-bold text-lg">
             Valentine's offer
           </span>
-          <div className="flex items-center gap-1 font-bold text-lg text-[#146DE1]">
+          <div className="flex items-center gap-1 font-bold text-3xl text-primary">
             <span>{pad(timeLeft.days)}</span>:<span>{pad(timeLeft.hours)}</span>
             :<span>{pad(timeLeft.minutes)}</span>:
             <span>{pad(timeLeft.seconds)}</span>
           </div>
-          <div className="flex gap-4 text-[10px]">
+          <div className="flex gap-5 font-bold justify-center">
             <span>Days</span>
             <span>Hrs</span>
             <span>Min</span>
@@ -62,8 +62,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex items- enter">
-          <Button />
+        <div className="justify-self-end col-start-2 row-start-1 md:col-start-3  flex items-center">
+          <Button color="green"  />
         </div>
       </div>
     </nav>

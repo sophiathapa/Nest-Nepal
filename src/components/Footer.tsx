@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
 const Footer = () => {
@@ -30,8 +31,7 @@ const Footer = () => {
               href="#"
               className="hover:opacity-100 transition-opacity flex items-center gap-1"
             >
-              Get A Quotation
-              {/* <ArrowUpRight className="w-3 h-3" /> */}
+              Get A Quotation <ArrowUpRight className="w-3 h-3" />
             </a>
           </div>
         </div>

@@ -1,29 +1,31 @@
-import React from 'react'
+const styles = {
+  green: {
+    button: "bg-green border-green-foreground",
+    text: "text-green-foreground",
+  },
+  pink: {
+    button: "bg-pink border-pink-foreground",
+    text: "text-pink-foreground",
+  },
+};
 
-const Button = () => {
+const Button = ({ color = "green", placeholder = "Contact Sales" }) => {
   return (
-    <>
-    
-    <button className='bg-[#40C351]/15 rounded-xl p-1 border-2 border-[#40C351]'>
-      <div className='flex gap-3 items-center text-[#40C351]'>
-        <img src="SVG.svg" className='w-[36px] h-[36px]'/>
-      Contact Sales
+    <button
+      className={`rounded-xl border p-0 ${styles[color].button}`}
+    >
+      <div
+        className={`flex items-center gap-2 h-[32px] px-3 ${styles[color].text}`}
+      >
+        <img
+          src={`${color}.svg`}
+          className="w-[26px] h-[26px]"
+          alt={`${color} icon`}
+        />
+        {placeholder}
       </div>
-      </button>
+    </button>
+  );
+};
 
-
-  <br></br>
-<br></br>
-
-
- {/* <button className='bg-[#F25277]/15 rounded-xl p-2 border-2 border-[#F25277]'>
-      <div className='flex gap-3 items-center text-[#F25277]'>
-        <img src="SVG (3).svg" className='w-[36px] h-[36px]'/>
-      Contact Sales
-      </div>
-      </button> */}
-</>
-  )
-}
-
-export default Button
+export default Button;
